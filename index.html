@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="vendor.css?v=f3749da992f1b3027d7a364e2f41a37e" rel="stylesheet">
+        <link href="site.css?v=802bd2d6def1124bbba00b2ffd679f97" rel="stylesheet">
+        <title>Covid-19 Patients Map View</title>
+        <meta name="description" content="Visualized Covid Data">
+		<!--This allows you to visualize multiple points such as latitude and longitude. 
+		You can also specify a shape (circle/square/marker), a color, and a comment for each of the points.-->
+		
+    </head>
+    <body id="index" class="nav-md">
+        <nav class="main-nav navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h1>
+                            MI Map Tools:<br>GeoPlotter
+                        </h1>
+                    </div>
+                    <div class="col-sm-9 desc nopadding"><!--This tool allows you visualize/plot multiple points (lat, long)/(latitude, longitude) on the map. 
+					It also allows you to specify a shape (circle/square/marker),
+					a color and a comment for each of the points. Only lat, long for each line is mandatory. 
+					Providing color, shape and comment is optional.--></div>
+                </div>
+            </div>
+        </nav>
+        <div class="container map-container">
+            <div class="row map-row">
+                <div class="col-sm-3 nopadding">
+                    <form name="multiPointForm" id="multiPointForm">
+                        <div class="container multi-point-form-div">
+                            <div class="col-sm-12 form-group">
+                                <label for="multiPointTextarea">Paste/Enter Geo Points Details</label>
+                                <textarea id="multiPointTextarea" name="multiPointTextarea" class="form-control"></textarea>
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="showPointNumsCheckBox" name="showPointNumsCheckBox" type="checkbox" value="">Show Point Numbers
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="showLinesCheckBox" name="showLinesCheckBox" type="checkbox" value="">Show Lines
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button id="updateMapButton" type="button" class="btn btn-primary">Update Map</button>
+                            </div>
+                            <div class="col-sm-12 form-group center-section">
+                                <label for="multiPointTextarea">Center Map At</label>
+                                <input type="text" id="centerField" name="centerField" class="form-control" placeholder="-22.9068,143.1729">
+                            </div>
+                            <div class="col-sm-12">
+                                <button id="centerMapButton" type="button" class="btn btn-primary">Center Map</button>
+                            </div>
+                            <div class="col-sm-12 contact-div">
+                                <p>
+                                  
+                                </p>
+                             
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-9 main-map nopadding" id="map"></div>
+            </div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkCkF8y8CAyGtSi8it8WuJvG2gBpyzbHE"></script>
+        <script src="vendor.js?v=48c1c729b4b7b703255793539f686b15"></script>
+        <script src="site.js?v=12651ef447a4f55aa66c4d70e803c6dc"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10974657-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-10974657-1');
+        </script>
+    </body>
+</html>
